@@ -1,10 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int a = 20;
-    cout << a << endl;
-
+int main() {
+    cout << 5 << 5;
     return 0;
 }
