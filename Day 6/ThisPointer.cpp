@@ -13,18 +13,21 @@ public:
         this->age = age;
     }
 
-    void display(){
-    cout<<"name"<<name;
-    cout<<"age"<<name;
+    void display()
+    {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age;
     }
-        void show()
+
+    void show()
     {
         cout << this;
     }
 };
 
-int main(){
-    Student s1("sakshi",21)
+int main()
+{
+    Student s1("kp", 21);
     s1.display();
     return 0;
 }
