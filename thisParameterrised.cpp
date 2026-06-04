@@ -3,20 +3,33 @@ using namespace std;
 
 class Student
 {
-public:
+private:
 string name;
 int rollNo;
 
-Student()
+public:
+Student(string name, int rollNo)
 {
-    cout<<"non parameterised constructor..."<<endl;
-    cout<<"memory address from this pointer :"<<this<<endl;
+    cout<<"parameterised constructor...."<<endl;
+    this->name=name;
+    this->rollNo=rollNo;
+
+    cout<<"Name inside constructor :"<<name<<endl;
+    cout<<"Roll no inside constructor :"<<rollNo<<endl;
+}
+
+
+void show()
+{
+    cout<<"name outside constructor :"<<name <<endl;
+    cout<<"name inside constructor :"<<rollNo;
 }
 };
 
 int main()
 {
 
-Student s1;
-cout<<"address from adress operator :"<<&s1;
+Student s1("sakshi",21);
+s1.show();
+return 0;
 }
