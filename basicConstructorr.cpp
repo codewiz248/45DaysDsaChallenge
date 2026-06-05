@@ -20,9 +20,9 @@ public:
 
 int main()
 {
-    Student s1("sakshi", 263);
-    Student s2("duggu", 83);
-    Student s3("pranay", 33);
-    Student s4("sahil", 34);
+    Student s1("X", 263);
+    Student s2("Y", 83);
+    Student s3("Z", 33);
+    Student s4("W", 34);
     return 0;
 }

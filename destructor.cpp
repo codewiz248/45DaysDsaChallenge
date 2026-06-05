@@ -5,22 +5,22 @@ class Student
 {
 public:
     string name;
-
     Student()
     {
-        cout << "constructor called......" << endl;
+        cout << "Constructor callled...\n";
     }
 
     ~Student()
     {
-        cout << "destructor called........." << endl;
+        cout << "Destructor Called...\n";
+
     }
 };
 
 int main()
 {
     Student s1;
-    s1.name="sakshi";
-    cout<<"name :"<<s1.name<<endl;
+    s1.name = "sakshi";
+    cout<<"Name: "<<s1.name<<endl;
     return 0;
 }
