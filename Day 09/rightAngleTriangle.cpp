@@ -1,3 +1,5 @@
+
+//increament by consequetively
 #include <iostream>
 using namespace std;
 
