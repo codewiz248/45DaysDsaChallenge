@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    set<int, greater<int>> s; //greater makes sorting in descending order
+    set<int, greater<int>> s; // greater makes sorting in descending order
     s.insert(2);
     s.insert(2);
     s.insert(2);
@@ -35,7 +35,7 @@ int main()
     }
 
     s.erase(81);
-   s.erase(s.begin());
+    s.erase(s.begin());
     for (auto it : s)
     {
         cout << it << " ";
