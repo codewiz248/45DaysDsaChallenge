@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    string str = "aaAAbbBBccCCddDD";
-    map<char, int> hashmap;
+    string str = "aaAAbbBBccCCddDDEe";
+    unordered_map<char, int> hashmap;
 
     // traverse in string
     for (int i = 0; i < str.size(); i++)
