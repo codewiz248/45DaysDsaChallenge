@@ -4,8 +4,10 @@ using namespace std;
 
 void mergeArray(vector<int> &arr, int low, int mid, int high)
 {
-    vector<int> temp;
-    int left = low;
+
+    // Part 1: sort & merge
+    vector<int> temp; // Create temp array to sort so that original array doesnt change
+    int left = low;   
     int right = mid + 1;
 
     while (left <= mid && right <= high)
@@ -22,6 +24,7 @@ void mergeArray(vector<int> &arr, int low, int mid, int high)
         }
     }
 
+    //if any array exhaust then push entire array
     while (left <= mid)
     {
         temp.push_back(arr[left]);
@@ -33,12 +36,15 @@ void mergeArray(vector<int> &arr, int low, int mid, int high)
         right++;
     }
 
+
+    //
     for (int i = low; i <= high; i++)
     {
         arr[i] = temp[i - low];
     }
 }
 
+// Part 2: Divide
 void mergeSort(vector<int> &arr, int low, int high)
 {
     if (low == high)
@@ -46,18 +52,19 @@ void mergeSort(vector<int> &arr, int low, int high)
         return;
     }
     int mid = (low + high) / 2;
-    mergeSort(arr, low, mid);
-    mergeSort(arr, mid + 1, high);
-    mergeArray(arr, low, mid, high);
+    mergeSort(arr, low, mid);        // left arrayy
+    mergeSort(arr, mid + 1, high);   // right array
+    mergeArray(arr, low, mid, high); // function to sort
 }
 
 int main()
 {
-    vector<int> v = {10, 9, 6, 8, 7, 4, 2, 5, 3, 1,11,21,32,45};
+    vector<int> v = {10, 9, 6, 8, 7, 4, 90};
     mergeSort(v, 0, v.size() - 1);
 
-    for(auto it : v){
-        cout<<it<<" ";
-    }    
+    for (auto it : v)
+    {
+        cout << it << " ";
+    }
     return 0;
 }
